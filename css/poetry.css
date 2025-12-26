@@ -1,0 +1,45 @@
+/* POETRY PAGE ONLY */
+
+.poetry-hero {
+  min-height: 60vh;
+  padding-top: 160px;
+  text-align: center;
+}
+
+.poetry-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  letter-spacing: 1px;
+}
+
+.poetry-subtitle {
+  margin-top: 20px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* POEMS SECTION */
+.poems {
+  max-width: 800px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.poem {
+  margin-bottom: 100px;
+  padding-left: 20px;
+  border-left: 2px solid rgba(122,31,31,0.4);
+}
+
+.poem h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.poem p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #e5e5e5;
+}

@@ -1,0 +1,383 @@
+/* POETRY HUB STYLES */
+
+/* Hero */
+.poetry-hero {
+  min-height: 60vh;
+  padding-top: 160px;
+  text-align: center;
+  background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95)),
+              url('../assets/images/poetry-bg.jpg') center/cover;
+}
+
+.poetry-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.poetry-subtitle {
+  font-size: 1.3rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* Language Selection */
+.language-selection {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.lang-card {
+  background: rgba(30, 30, 30, 0.5);
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.lang-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(122, 31, 31, 0.1), transparent);
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.lang-card:hover::before {
+  transform: translateX(100%);
+}
+
+.lang-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 40px rgba(122, 31, 31, 0.2);
+}
+
+.lang-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(122, 31, 31, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 2rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.lang-card:hover .lang-icon {
+  background: rgba(122, 31, 31, 0.2);
+  transform: scale(1.1) rotate(10deg);
+}
+
+.lang-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.lang-count {
+  display: inline-block;
+  background: rgba(122, 31, 31, 0.2);
+  color: var(--accent);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(122, 31, 31, 0.4);
+}
+
+/* Specific language cards */
+.lang-card.english {
+  border-top: 4px solid #7a1f1f;
+}
+
+.lang-card.bengali {
+  border-top: 4px solid #2a7a1f;
+}
+
+.lang-card.urdu {
+  border-top: 4px solid #1f5c7a;
+}
+
+/* Books Showcase */
+.books-showcase {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.book-card {
+  background: rgba(30, 30, 30, 0.5);
+  border: 1px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(122, 31, 31, 0.2);
+}
+
+.book-cover {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.book-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-card:hover .book-overlay {
+  opacity: 1;
+}
+
+.view-btn {
+  background: rgba(122, 31, 31, 0.8);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background: rgba(122, 31, 31, 1);
+  transform: scale(1.05);
+}
+
+.book-info {
+  padding: 25px;
+}
+
+.book-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.book-year {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.book-desc {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.book-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.book-tags span {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* Featured Poem */
+.featured-poem {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 60px 40px;
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 20px;
+  border: 1px solid #333;
+}
+
+.poem-preview {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.poem-excerpt h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--accent);
+}
+
+.poem-excerpt blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #e5e5e5;
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.read-more {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  transform: translateX(10px);
+  color: #fff;
+}
+
+.poem-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(122, 31, 31, 0.1);
+  border: 1px solid rgba(122, 31, 31, 0.3);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  background: rgba(122, 31, 31, 0.2);
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .poetry-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .language-grid,
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .poem-preview {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .poem-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Add these styles to your existing poetry-hub.css file */
+.card-subtitle {
+  color: var(--accent);
+  font-style: italic;
+  margin: 10px 0 20px 0;
+  font-size: 1.1rem;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make the language cards more compact */
+.lang-card {
+  padding: 30px 25px;
+}
+
+.lang-card h3 {
+  font-size: 1.6rem;
+  min-height: 50px;
+}
+
+.lang-card p.card-subtitle {
+  min-height: 40px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+

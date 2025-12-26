@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Sabbir Hasan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Maps Embed API (optional) -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">S@bbir</div>
+      <ul class="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="tech.html">Tech</a></li>
+        <li><a href="poetry.html">Poetry</a></li>
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+  <!-- CONTACT HERO -->
+  <section class="contact-hero">
+    <div class="hero-content reveal">
+      <h1>Let's Connect</h1>
+      <p class="hero-subtitle">
+        Whether you want to talk about tech, poetry, or just life.<br>
+        I'm always open to meaningful conversations.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="contact-info">
+    <div class="info-grid">
+      <!-- Location -->
+      <div class="info-card reveal">
+        <div class="info-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Location</h3>
+        <p>Dhaka, Bangladesh</p>
+        <p class="info-note">Based in the heart of Bangladesh</p>
+      </div>
+
+      <!-- Email -->
+      <div class="info-card reveal">
+        <div class="info-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email</h3>
+        <p>sabbiremon10@gmail.com</p>
+        <p class="info-note">Response within 24 hours</p>
+      </div>
+
+      <!-- Education -->
+      <div class="info-card reveal">
+        <div class="info-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Education</h3>
+        <p>Daffodil International University</p>
+        <p class="info-note">BSc in Software Engineering</p>
+      </div>
+
+      <!-- Availability -->
+      <div class="info-card reveal">
+        <div class="info-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>Availability</h3>
+        <p>Open for Collaboration</p>
+        <p class="info-note">Freelance & Projects</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL LINKS - CIRCULAR BUTTONS -->
+  <section class="social-links">
+    <h2 class="section-title reveal">My Social Links</h2>
+    
+    <div class="social-grid">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/failure.emon" target="_blank" class="social-circle facebook reveal">
+        <div class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <span class="social-name">Facebook</span>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/sabbir_hasan_92/" target="_blank" class="social-circle instagram reveal">
+        <div class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <span class="social-name">Instagram</span>
+      </a>
+
+      <!-- Threads -->
+      <a href="https://www.threads.com/@sabbir_hasan_92" target="_blank" class="social-circle threads reveal">
+        <div class="social-icon">
+          <i class="fab fa-threads"></i>
+        </div>
+        <span class="social-name">Threads</span>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/Bee92-exe" target="_blank" class="social-circle github reveal">
+        <div class="social-icon">
+          <i class="fab fa-github"></i>
+        </div>
+        <span class="social-name">GitHub</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="#" target="_blank" class="social-circle linkedin reveal">
+        <div class="social-icon">
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <span class="social-name">LinkedIn</span>
+      </a>
+
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/8801925531253" target="_blank" class="social-circle whatsapp reveal">
+        <div class="social-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <span class="social-name">WhatsApp</span>
+      </a>
+
+    </div>
+  </section>
+
+  <br><br>
+
+  <!-- CONTACT FORM & COMMENT BOX -->
+  <section class="contact-form-section">
+    <div class="form-container">
+      <!-- Left: Contact Form -->
+      <div class="contact-form reveal">
+        <h2>Send Me a Message</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Your Name</label>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Your Email</label>
+          </div>
+          
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" required>
+            <label for="subject">Subject</label>
+          </div>
+          
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Comment Box -->
+      <div class="comment-box reveal-delay">
+        <h2>Leave a Comment</h2>
+        <p class="comment-instruction">
+          Share your thoughts about my work, poetry, or just say hello!
+        </p>
+        
+        <form id="commentForm">
+          <div class="form-group">
+            <textarea id="comment" name="comment" rows="8" placeholder="Write your comment here..."></textarea>
+          </div>
+          
+          <div class="comment-options">
+            <div class="comment-type">
+              <h4>Comment Type:</h4>
+              <div class="type-options">
+                <label>
+                  <input type="radio" name="commentType" value="feedback" checked>
+                  <span>Feedback</span>
+                </label>
+                <label>
+                  <input type="radio" name="commentType" value="poetry">
+                  <span>About Poetry</span>
+                </label>
+                <label>
+                  <input type="radio" name="commentType" value="collab">
+                  <span>Collaboration</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="privacy-note">
+              <input type="checkbox" id="publicComment" checked>
+              <label for="publicComment">Post this comment publicly</label>
+            </div>
+          </div>
+          
+          <button type="submit" class="comment-btn">
+            <span>Post Comment</span>
+            <i class="fas fa-comment"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISITOR MESSAGES (Simulated) -->
+  <section class="visitor-messages">
+    <h2 class="section-title reveal">Recent Visitor Comments</h2>
+    
+    <div class="messages-grid">
+      <!-- Message 1 -->
+      <div class="message-card reveal">
+        <div class="message-header">
+          <div class="message-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="message-info">
+            <h4>Anonymous Reader</h4>
+            <span class="message-time">2 days ago</span>
+          </div>
+        </div>
+        <p class="message-content">
+          "Your poetry touched my soul. 'A Ghost Named Love' made me cry. Please keep writing."
+        </p>
+        <div class="message-tag">
+          <i class="fas fa-heart"></i> About Poetry
+        </div>
+      </div>
+
+      <!-- Message 2 -->
+      <div class="message-card reveal">
+        <div class="message-header">
+          <div class="message-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="message-info">
+            <h4>Fellow Developer</h4>
+            <span class="message-time">1 week ago</span>
+          </div>
+        </div>
+        <p class="message-content">
+          "Love your portfolio design! The photo marquee is awesome. Can we collaborate on a project?"
+        </p>
+        <div class="message-tag">
+          <i class="fas fa-code"></i> Collaboration
+        </div>
+      </div>
+
+      <!-- Message 3 -->
+      <div class="message-card reveal">
+        <div class="message-header">
+          <div class="message-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="message-info">
+            <h4>Travel Buddy</h4>
+            <span class="message-time">2 weeks ago</span>
+          </div>
+        </div>
+        <p class="message-content">
+          "Your travel photos are stunning! Planning to visit Bangladesh soon. Any recommendations?"
+        </p>
+        <div class="message-tag">
+          <i class="fas fa-plane"></i> Travel
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="cta-section">
+    <div class="cta-content reveal">
+      <h2>Let's Create Something Beautiful Together</h2>
+      <p>
+        Whether it's building amazing software, writing heartfelt poetry, 
+        or exploring new places - I believe in creating meaningful work.
+      </p>
+      <div class="cta-buttons">
+        <a href="mailto:sabbiremon10@gmail.com" class="cta-btn primary">
+          <i class="fas fa-envelope"></i> Email Me Directly
+        </a>
+        <a href="#" target="_blank" class="cta-btn secondary">
+          <i class="fas fa-calendar"></i> Schedule a Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Sabbir Hasan Emon | Built with passion and poetry</p>
+    <p class="footer-note">
+      <i class="fas fa-heart"></i> This website is my heart in digital form
+    </p>
+  </footer>
+
+  <script src="js/scroll.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+:root {
+  --bg: #0a0a0a;
+  --text: #f2f2f2;
+  --muted: #9a9a9a;
+  --accent: #7a1f1f; /* muted crimson */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* NAVBAR - UPDATED WITH HAMBURGER */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10,10,10,0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.3s;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--text);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+/* Hamburger menu - hidden by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--text);
+  transition: 0.3s;
+}
+
+/* Add to animations.css for hamburger animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+.hero h2 {
+  margin-top: 10px;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+.tagline {
+  margin-top: 25px;
+  color: var(--muted);
+}
+
+.tagline span {
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* DUAL WORLD */
+.dual-world {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 100px 10%;
+}
+
+.world-card {
+  border: 1px solid #222;
+  padding: 40px;
+  transition: transform 0.4s, border-color 0.4s;
+}
+
+.world-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent);
+}
+
+.world-card h3 {
+  margin-bottom: 15px;
+}
+
+.world-card a {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+}
+/* PHOTO MARQUEE */
+.photo-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 70px;
+}
+
+/* VIGNETTE */
+.photo-marquee::before,
+.photo-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.photo-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #0a0a0a, transparent);
+}
+
+.photo-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #0a0a0a, transparent);
+}
+
+/* TRACKS */
+.photo-track {
+  display: flex;
+  width: max-content;
+}
+
+.row-one {
+  animation: marquee-left 70s linear infinite;
+}
+
+.row-two {
+  animation: marquee-right 90s linear infinite;
+  margin-top: 20px;
+}
+
+/* PAUSE ON HOVER */
+.photo-marquee:hover .photo-track {
+  animation-play-state: paused;
+}
+
+/* PHOTO FRAME */
+.photo-track img {
+  width: 220px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 22px;
+  padding: 5px;
+  background: linear-gradient(135deg, #7a1f1f, #111, #2a2a2a, #7a1f1f);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+  filter: brightness(90%);
+}
